@@ -1,0 +1,23 @@
+name: leadsignal
+
+services:
+  hermes:
+    image: ghcr.io/hostinger/hvps-hermes-agent@sha256:03295aaee23c04ab037ef46f9f1efe89bab9852d3135b1b69102c1b0ad646bb0
+    restart: unless-stopped
+    env_file:
+      - ./config/supabase.env
+      - ./config/providers.env
+      - ./config/hermes-admin.env
+    volumes:
+      - ./hermes-data:/opt/data
+    ports:
+      - "127.0.0.1:4860:4860"
+    networks:
+      - existing_proxy
+    labels:
+      traefik.enable: "false"
+
+networks:
+  existing_proxy:
+    external: true
+    name: n8n_default

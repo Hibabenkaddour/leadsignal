@@ -1,0 +1,23 @@
+{
+  "internal_tech_recruiter_hiring": {
+    "keywords": "(\"technical recruiter\" OR \"tech recruiter\" OR \"IT recruiter\" OR \"technical sourcer\" OR \"recruteur IT\" OR \"recruteur tech\" OR \"recrutement IT\" OR \"recrutement informatique\" OR \"talent acquisition specialist\" OR \"talent acquisition manager\" OR \"talent acquisition partner\")",
+    "location": "France",
+    "page_number": 1,
+    "sort": "recent",
+    "limit": 25
+  },
+  "tech_job_velocity_cluster": {
+    "keywords": "(\"développeur\" OR \"développeuse\" OR \"developer\" OR \"software engineer\" OR \"ingénieur logiciel\" OR \"software architect\" OR \"architecte logiciel\" OR \"tech lead\" OR \"engineering manager\" OR \"CTO\" OR \"frontend\" OR \"backend\" OR \"fullstack\" OR \"full stack\" OR \"QA engineer\" OR \"test automation\" OR \"ingénieur test\" OR \"data engineer\" OR \"data scientist\" OR \"data analyst\" OR \"analytics engineer\" OR \"data architect\" OR \"architecte data\" OR \"business intelligence\" OR \"consultant BI\" OR \"machine learning engineer\" OR \"AI engineer\" OR \"ingénieur IA\" OR \"MLOps\" OR \"DevOps\" OR \"DevSecOps\" OR \"SRE\" OR \"cloud engineer\" OR \"cloud architect\" OR \"platform engineer\" OR \"ingénieur systèmes\" OR \"ingénieur réseaux\" OR \"administrateur systèmes\" OR \"cybersécurité\" OR \"cybersecurity\" OR \"security engineer\" OR \"analyste SOC\" OR \"RSSI\" OR \"technical product manager\" OR \"product owner\")",
+    "location": "France",
+    "page_number": 1,
+    "sort": "relevant",
+    "limit": 25
+  },
+  "tech_role_repost": {
+    "keywords": "(\"développeur\" OR \"développeuse\" OR \"developer\" OR \"software engineer\" OR \"ingénieur logiciel\" OR \"software architect\" OR \"architecte logiciel\" OR \"tech lead\" OR \"engineering manager\" OR \"CTO\" OR \"frontend\" OR \"backend\" OR \"fullstack\" OR \"full stack\" OR \"QA engineer\" OR \"test automation\" OR \"ingénieur test\" OR \"data engineer\" OR \"data scientist\" OR \"data analyst\" OR \"analytics engineer\" OR \"data architect\" OR \"architecte data\" OR \"business intelligence\" OR \"consultant BI\" OR \"machine learning engineer\" OR \"AI engineer\" OR \"ingénieur IA\" OR \"MLOps\" OR \"DevOps\" OR \"DevSecOps\" OR \"SRE\" OR \"cloud engineer\" OR \"cloud architect\" OR \"platform engineer\" OR \"ingénieur systèmes\" OR \"ingénieur réseaux\" OR \"administrateur systèmes\" OR \"cybersécurité\" OR \"cybersecurity\" OR \"security engineer\" OR \"analyste SOC\" OR \"RSSI\" OR \"technical product manager\" OR \"product owner\")",
+    "location": "France",
+    "page_number": 1,
+    "sort": "recent",
+    "limit": 25
+  }
+}

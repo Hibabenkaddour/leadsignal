@@ -1,0 +1,17 @@
+1. Dans le terminal du VPS, préparer un dossier privé :
+umask 077
+mkdir -p /root/leadsignal-supabase-export
+
+2. Exécuter cette commande seule, attendre Password:, saisir le mot de passe de la BASE Supabase :
+docker run --rm -it -e PGSSLMODE=require -e PGCLIENTENCODING=UTF8 -v /root/leadsignal-supabase-export:/export postgres:18 pg_dump --host=aws-1-eu-central-1.pooler.supabase.com --port=5432 --username=postgres.penrkhejgigmhrlcyotq --dbname=postgres --password --schema-only --schema=public --no-owner --file=/export/supabase-schema.sql
+
+3. Si pg_dump revient sans erreur, vérifier :
+test -s /root/leadsignal-supabase-export/supabase-schema.sql && tail -n 5 /root/leadsignal-supabase-export/supabase-schema.sql
+
+4. Dans PowerShell SUR LE PC :
+scp root@72.60.184.214:/root/leadsignal-supabase-export/supabase-schema.sql "$env:USERPROFILE\Downloads\leadsignal-supabase-schema.sql"
+
+Ne pas partager de mot de passe. Ce SQL doit être contrôlé avant GitHub, car les
+fonctions ou valeurs par défaut peuvent contenir des secrets même en schema-only.
+La base du VPS et les données Supabase ne sont pas modifiées par pg_dump.
+Cette commande suppose que le pooler utilisé précédemment n'a pas changé.

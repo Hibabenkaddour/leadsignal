@@ -1,0 +1,22 @@
+# /etc/systemd/system/leadsignal-monitoring-sync.service
+[Unit]
+Description=LeadSignal - synchronisation Monitoring
+After=docker.service network-online.target
+Requires=docker.service
+Wants=network-online.target
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /docker/leadsignal/monitoring/sync_monitoring.py
+TimeoutStartSec=180
+UMask=0077
+
+# /etc/systemd/system/leadsignal-monitoring-sync.timer
+[Unit]
+Description=LeadSignal - actualiser le Monitoring chaque minute
+[Timer]
+OnBootSec=30s
+OnUnitActiveSec=60s
+AccuracySec=5s
+Unit=leadsignal-monitoring-sync.service
+[Install]
+WantedBy=timers.target

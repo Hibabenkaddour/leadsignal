@@ -1,0 +1,16 @@
+body.locked { display: block; background: #f5f6fb; }
+body.locked > .sidebar, body.locked > main { display: none !important; }
+[hidden] { display: none !important; }
+.auth-panel { box-sizing: border-box; width: min(440px, calc(100% - 32px)); margin: 9vh auto; padding: 36px; background: white; border: 1px solid #dce3ed; border-radius: 16px; box-shadow: 0 16px 48px #17204412; }
+.auth-panel img { width: 160px; height: auto; margin-bottom: 24px; }
+.auth-panel h1 { font-size: 25px; margin: 0 0 8px; }
+.auth-panel p { color: #64748b; line-height: 1.5; }
+.auth-panel label { display: block; margin: 18px 0 6px; font-weight: 600; }
+.auth-panel input { width: 100%; box-sizing: border-box; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font: inherit; }
+.auth-panel button { padding: 12px 18px; margin-top: 18px; border-radius: 8px; border: 0; background: #3000c9; color: white; font: inherit; cursor: pointer; }
+.auth-panel button[type=submit] { width: 100%; }
+.auth-panel button:disabled { opacity: .6; }
+.auth-panel .text-button { background: none; color: #3000c9; padding: 0; }
+.auth-panel :focus-visible { outline: 3px solid #a79af4; outline-offset: 3px; }
+.account-controls { margin: 24px 16px; overflow-wrap: anywhere; color: #64748b; font-size: 13px; }
+.account-controls button { display: block; margin-top: 12px; padding: 8px 12px; cursor: pointer; }

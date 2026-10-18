@@ -1,0 +1,17 @@
+{
+  "signal_key": "tech_job_velocity_cluster",
+  "actor": "apimaestro/linkedin-jobs-scraper-api",
+  "company_request_template": {
+    "company_id": "<verified_linkedin_company_urn>",
+    "keywords": "",
+    "location": "France",
+    "sort": "recent",
+    "date_posted": "month",
+    "page_number": 1,
+    "limit": 10
+  },
+  "max_pages_per_company": 3,
+  "cluster_min_jobs": "from_batch_snapshot",
+  "cluster_window_days": "from_batch_snapshot",
+  "max_displayed_job_sources": 5
+}

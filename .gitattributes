@@ -1,0 +1,4 @@
+* text=auto eol=lf
+*.png binary
+# Preserve the runner's byte-level integrity checks.
+hermes-data/leadsignal_runner/** -text

@@ -1,0 +1,5 @@
+# Minimal scheduling configuration. Merge with Hermes setup; do not overwrite a live config.
+timezone: Europe/Paris
+cron:
+  script_timeout_seconds: 19800
+# Configure the model, providers and MCP servers in Hermes on the target machine.

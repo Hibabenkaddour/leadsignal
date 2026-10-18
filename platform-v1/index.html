@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LeadSignal AI</title>
+  <link rel="stylesheet" href="styles.css?v=cluster-display-20261013-v2">
+  <style>.signal-option{min-height:64px;align-items:center}.signal-option input{margin-top:0}.signal-option span{display:block}</style>
+  <link rel="stylesheet" href="source-trace.css?v=monitor2h">
+  <link rel="stylesheet" href="auth.css?v=1">
+</head>
+<body class="locked">
+  <section id="authPanel" class="auth-panel">
+    <img src="kaino-logo.png" alt="Kaino">
+    <h1>Connexion à votre espace</h1>
+    <p>Un espace partagé, réservé aux membres invités de votre équipe.</p>
+    <form id="loginForm">
+      <label for="loginEmail">Adresse e-mail</label><input id="loginEmail" type="email" autocomplete="username" required>
+      <label for="loginPassword">Mot de passe</label><input id="loginPassword" type="password" autocomplete="current-password" required>
+      <button type="submit">Se connecter</button>
+      <button type="button" class="text-button" id="resetPassword">Mot de passe oublié ?</button>
+    </form>
+    <form id="passwordForm" hidden><label for="newPassword">Définir votre mot de passe</label><input id="newPassword" type="password" minlength="12" autocomplete="new-password" required><button type="submit">Enregistrer mon mot de passe</button></form>
+    <p id="authStatus" role="status" aria-live="polite"></p>
+    <button type="button" class="text-button" id="authSignOut" hidden>Se déconnecter</button>
+  </section>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-logo-wrapper" style="display: flex; align-items: center; margin-bottom: 8px;">
+        <img src="kaino-logo.png" alt="Kaino Logo" style="width: 160px; height: auto; object-fit: contain;">
+      </div>
+    </div>
+    <nav>
+      <button class="nav-item active" data-view="feed">Opportunités</button>
+      <button class="nav-item" data-view="icp">ICP & Signaux</button>
+      <button class="nav-item" data-view="watchlist">Watchlist</button>
+      <button class="nav-item" data-view="monitoring">Monitoring</button>
+    </nav>
+    <div class="account-controls"><span id="accountEmail"></span><button type="button" id="logoutButton">Se déconnecter</button></div>
+  </aside>
+
+  <main>
+    <header class="topbar">
+      <div>
+        <h1 id="pageTitle">Opportunités</h1>
+        <p id="pageSubtitle"></p>
+      </div>
+    </header>
+
+    <section class="kpis">
+      <div><span>Nouvelles opportunités</span><strong id="kpiNew">0</strong></div>
+      <div><span>Signaux actifs</span><strong id="kpiSignals">0</strong></div>
+      <div><span>Comptes suivis</span><strong id="kpiWatchlist">0</strong></div>
+    </section>
+
+    <section id="filters" class="filters">
+      <input id="searchInput" placeholder="Rechercher une entreprise, un signal, une raison...">
+      <select id="signalFilter">
+        <option value="all">Tous les signaux</option>
+      </select>
+      <input id="cityFilter" placeholder="Filtrer par ville...">
+      <select id="sortOrder">
+        <option value="added" selected>Nouvelles opportunités d’abord</option>
+        <option value="newest">Du plus récent au plus ancien</option>
+        <option value="oldest">Du plus ancien au plus récent</option>
+      </select>
+    </section>
+
+    <div class="layout">
+      <div class="panel" id="content"></div>
+      <div class="detail" id="detail"></div>
+    </div>
+  </main>
+
+  <div id="toast" class="toast" style="display:none"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-client.js"></script>
+  <script src="auth.js?v=cluster-display-20261013-v2"></script>
+</body>
+</html>

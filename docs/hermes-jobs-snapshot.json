@@ -1,0 +1,26 @@
+[
+  {
+    "id": "e60f0426fe41",
+    "name": "LeadSignal - recherche nocturne 5h",
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 0 * * 6,0,1",
+      "display": "0 0 * * 6,0,1"
+    },
+    "script": "leadsignal-nightly.sh",
+    "no_agent": true,
+    "enabled": true
+  },
+  {
+    "id": "5b510e209e2c",
+    "name": "LeadSignal - nettoyage mensuel 11 mois",
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 6 1 * *",
+      "display": "0 6 1 * *"
+    },
+    "script": "leadsignal-cleanup.sh",
+    "no_agent": true,
+    "enabled": true
+  }
+]
